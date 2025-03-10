@@ -15,7 +15,7 @@ def test_login():
 
     print(driver.title)  # Print page title to verify
     expected_title = driver.title  # Fixed variable name
-    assert "Kalaloka" in expected_title, f"Expected 'Kalaloka' in title, but got '{expected_title}'"
+    assert "KalaLoka" in expected_title, f"Expected 'Kalaloka' in title, but got '{expected_title}'"
     print("Page Is Loaded Successfully")
     driver.quit()
 
