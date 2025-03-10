@@ -13,9 +13,9 @@ def test_login():
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(url)
 
-    print(driver.title)  # Print page title to verify 
-    assert "Kalaloka" in driver.title  # Example assertion to check if title contains expected text
-
+    print(driver.title)  # Print page title to verify
+    expected_title = driver.title  # Fixed variable name
+    assert "Kalaloka" in expected_title, f"Expected 'Kalaloka' in title, but got '{expected_title}'"
+    print("Page Is Loaded Successfully")
     driver.quit()
 
-    
